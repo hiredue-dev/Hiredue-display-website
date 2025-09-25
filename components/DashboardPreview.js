@@ -6,7 +6,7 @@ import EmailSignup from "@/components/EmailSignup";
 export default function DashboardPreview() {
 
   return (
-    <section className="relative flex flex-col items-center my-16 px-4 text-center">
+    <section className="relative flex flex-col items-center my-8 px-4 text-center animate-slideUp">
       {/* Radial Gradient Glow */}
       <div className="absolute inset-0 flex justify-center pointer-events-none">
         <div

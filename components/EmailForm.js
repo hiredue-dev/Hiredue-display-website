@@ -3,7 +3,7 @@ import EmailSignup from "@/components/EmailSignup";
 
 export default function EmailForm() {
   return (
-    <section className="text-center py-20 px-6">
+    <section className="text-center py-20 px-6 animate-slideUp">
       {/* Heading */}
       <h2 className="text-3xl md:text-4xl font-bold text-white ">
         Get Early Access

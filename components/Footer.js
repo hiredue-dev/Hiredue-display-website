@@ -2,7 +2,7 @@ import { FaLinkedin, FaInstagram, FaFacebook,FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col sm:flex-row items-center justify-between px-8 py-6 border-t border-gray-800 text-gray-500 text-sm">
+    <footer className="flex flex-col sm:flex-row items-center justify-between px-8 py-6 border-t border-gray-800 text-gray-500 text-sm animate-slideUp">
       {/* Left: Copyright + About */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-center sm:text-left">
         <p>© {new Date().getFullYear()} HireDue. All rights reserved.</p>
