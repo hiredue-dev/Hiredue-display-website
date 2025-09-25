@@ -24,7 +24,7 @@ export default function DashboardPreview() {
       <div className="relative z-10 w-full max-w-5xl">
         {/* Title */}
         <h2 className="text-6xl font-extrabold text-white">
-  Coming <span className="text-[#646bdb]">Soon</span>
+  Coming Soon
 </h2>
         <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-400 leading-relaxed">
         HireDue uses advanced AI to automatically apply to relevant LinkedIn jobs while you sleep. 
@@ -34,7 +34,7 @@ export default function DashboardPreview() {
 
          {/* Reusable Email Signup */}
         <div className="mt-8">
-          <EmailSignup endpoint="https://script.google.com/macros/s/AKfycbxQ0g58xhmdSe9QBKaM7PARx5fYnrdA-OM7MsjtCK-p5bZkIM9kI8hOyHdk4yrVzmPq/exec" />
+          <EmailSignup endpoint={process.env.NEXT_PUBLIC_API_ENDPOINT} />
         </div>
 
         {/* Dashboard Image */}

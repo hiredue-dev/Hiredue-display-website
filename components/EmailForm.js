@@ -17,10 +17,10 @@ export default function EmailForm() {
 
       {/* Reusable Email Signup */}
               <div className="mt-8">
-                <EmailSignup endpoint="https://script.google.com/macros/s/AKfycbxQ0g58xhmdSe9QBKaM7PARx5fYnrdA-OM7MsjtCK-p5bZkIM9kI8hOyHdk4yrVzmPq/exec" />
+                <EmailSignup endpoint={process.env.NEXT_PUBLIC_API_ENDPOINT} />
               </div>
       <p className="mt-6 text-sm text-gray-500">
-        Join 10,000+ professionals waiting for HireDue. No spam, ever.
+        Join 1000+ professionals waiting for HireDue. No spam, ever.
       </p>
     </section>
   );
