@@ -16,8 +16,8 @@ export default function Footer() {
         </a>
       </div>
 
-      {/* Right: Social icons */}
-      <div className="flex gap-5 text-gray-400 text-lg mt-3 sm:mt-0">
+      {/* Right: Social icons : not active right now */}
+      {/* <div className="flex gap-5 text-gray-400 text-lg mt-3 sm:mt-0">
         <a
           href={process.env.NEXT_PUBLIC_LINKEDIN}
           target="_blank"
@@ -50,7 +50,7 @@ export default function Footer() {
         >
           <FaTwitter />
         </a>
-      </div>
+      </div> */}
     </footer>
   );
 }

@@ -11,8 +11,8 @@ export default function Navbar() {
         <span className="text-xl font-bold text-white">HireDue</span>
       </Link>
 
-      {/* Right: Social Icons */}
-      <div className="flex gap-5 text-gray-400 text-xl">
+      {/* Right: Social Icons: Not active right now */}
+      {/* <div className="flex gap-5 text-gray-400 text-xl">
         <a
           href={process.env.NEXT_PUBLIC_LINKEDIN}
           target="_blank"
@@ -45,7 +45,7 @@ export default function Navbar() {
         >
           <FaTwitter />
         </a>
-      </div>
+      </div> */}
     </nav>
   );
 }
