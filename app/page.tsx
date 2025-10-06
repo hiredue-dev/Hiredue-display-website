@@ -6,6 +6,7 @@ import Logos from "@/components/sections/logos/default";
 import Navbar from "@/components/sections/navbar/default";
 import Pricing from "@/components/sections/pricing/default";
 import Why from "@/components/sections/why/default";
+import Metrics from "@/components/sections/metrics/default";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <Logos />
       <Why />
+      <Metrics />
       <Pricing />
       <FAQ />
       <CTA />
