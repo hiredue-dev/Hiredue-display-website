@@ -10,16 +10,20 @@ import TypeScript from "@/public/logos/typescript";
 import { Badge } from "../../ui/badge";
 import Logo from "../../ui/logo";
 import { Section } from "../../ui/section";
+import { platform } from "@/config/platform";
+import Macos from "@/public/logos/macos";
+import Windows from "@/public/logos/windows";
+import Linux from "@/public/logos/linux";
 
-interface LogosProps {
+interface PlatformsProps {
   title?: string;
   badge?: ReactNode | false;
   logos?: ReactNode[] | false;
   className?: string;
 }
 
-export default function Logos({
-  title = "Built with industry-standard tools and best practices",
+export default function Platforms({
+  title = platform.title,
   badge = (
     <Badge variant="outline" className="border-brand/30 text-brand">
       Last updated: {siteConfig.stats.updated}
@@ -33,6 +37,24 @@ export default function Logos({
       image={TypeScript}
       name="TypeScript"
       version="5.9.2"
+    />,
+    <Logo
+      key="macos"
+      image={Macos}
+      name="Macos"
+      version="5.9+"
+    />,
+    <Logo
+      key="windows"
+      image={Windows}
+      name="Windows"
+      version="7.0+"
+    />,
+    <Logo
+      key="linux"
+      image={Linux}
+      name="Linux"
+			badge="new"
     />,
     <Logo
       key="shadcn"
@@ -50,7 +72,7 @@ export default function Logos({
     />,
   ],
   className,
-}: LogosProps) {
+}: PlatformsProps) {
   return (
     <Section className={className}>
       <div className="max-w-container mx-auto flex flex-col items-center gap-8 text-center">
@@ -59,8 +81,8 @@ export default function Logos({
           <h2 className="text-md font-semibold sm:text-2xl">{title}</h2>
         </div>
         {logos !== false && logos.length > 0 && (
-          <div className="flex flex-wrap items-center justify-center gap-8">
-            {logos}
+          <div className="flex flex-wrap lg:animate-marquee items-center justify-center gap-8">
+					{logos}
           </div>
         )}
       </div>
