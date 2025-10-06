@@ -11,6 +11,8 @@ import Glow from "../../ui/glow";
 import { Mockup, MockupFrame } from "../../ui/mockup";
 import Screenshot from "../../ui/screenshot";
 import { Section } from "../../ui/section";
+import { textConfig } from "@/config/texts";
+import { imageUrls } from "@/config/images";
 
 interface HeroButtonProps {
   href: string;
@@ -30,12 +32,12 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title = "Give your big idea the design it deserves",
-  description = "Professionally designed blocks and templates built with React, Shadcn/ui and Tailwind that will help your product stand out.",
+  title = textConfig.hero.tagline,
+  description = textConfig.hero.text,
   mockup = (
     <Screenshot
-      srcLight="/dashboard-light.png"
-      srcDark="/dashboard-dark.png"
+      srcLight={imageUrls.hero.banner.light}
+      srcDark={imageUrls.hero.banner.dark}
       alt="HireDue app screenshot"
       width={1248}
       height={765}
@@ -45,10 +47,10 @@ export default function Hero({
   badge = (
     <Badge variant="outline" className="animate-appear">
       <span className="text-muted-foreground">
-        New version of HireDue is out!
+				{textConfig.hero.comingSoon.message}
       </span>
       <a href={siteConfig.getStartedUrl} className="flex items-center gap-1">
-        Get started
+				{textConfig.hero.comingSoon.redirectMessage}
         <ArrowRightIcon className="size-3" />
       </a>
     </Badge>
@@ -84,24 +86,23 @@ export default function Hero({
           <p className="text-md animate-appear text-muted-foreground relative z-10 max-w-[740px] font-medium text-balance opacity-0 delay-100 sm:text-xl">
             {description}
           </p>
-          {buttons !== false && buttons.length > 0 && (
-            <div className="animate-appear relative z-10 flex justify-center gap-4 opacity-0 delay-300">
-              {buttons.map((button, index) => (
-                <Button
-                  key={index}
-                  variant={button.variant || "default"}
-                  size="lg"
-                  asChild
-                >
-                  <a href={button.href}>
-                    {button.icon}
-                    {button.text}
-                    {button.iconRight}
-                  </a>
-                </Button>
-              ))}
-            </div>
-          )}
+          {/* {buttons !== false && buttons.length > 0 && ( */}
+          {/*   <div className="animate-appear relative z-10 flex justify-center gap-4 opacity-0 delay-300"> */}
+          {/*     {buttons.map((button, index) => ( */}
+          {/*       <Button */}
+          {/*         key={index} */}
+          {/*         variant={button.variant || "default"} */}
+          {/*         size="lg" */}
+          {/*         asChild */}
+          {/*       > */}
+          {/*         <a href={button.href}> */}
+          {/*           {button.icon} */}
+          {/*           {button.text} */}
+          {/*           {button.iconRight} */}
+          {/*         </a> */}
+          {/*       </Button> */}
+          {/*     ))} */}
+          {/*   </div>)} */}
           {mockup !== false && (
             <div className="relative w-full pt-12">
               <MockupFrame
