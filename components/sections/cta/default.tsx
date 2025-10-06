@@ -6,6 +6,8 @@ import { cn } from "@/lib/utils";
 import { Button, type ButtonProps } from "../../ui/button";
 import Glow from "../../ui/glow";
 import { Section } from "../../ui/section";
+import { ArrowRight } from "lucide-react";
+import { Input } from "@/components/ui/input"
 
 interface CTAButtonProps {
   href: string;
@@ -17,17 +19,20 @@ interface CTAButtonProps {
 
 interface CTAProps {
   title?: string;
+  description?: string;
   buttons?: CTAButtonProps[] | false;
   className?: string;
 }
 
 export default function CTA({
-  title = "Start building",
+  title = "Get Early Access",
+  description = "Be among the first to experience the future of job applications. Join thousands of professionals already on our waitlist.",
   buttons = [
     {
       href: siteConfig.getStartedUrl,
-      text: "Get Started",
+      text: "Get Early Access",
       variant: "default",
+      iconRight: <ArrowRight className="ml-2 h-4 w-4" />,
     },
   ],
   className,
@@ -38,8 +43,10 @@ export default function CTA({
         <h2 className="max-w-[640px] text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight">
           {title}
         </h2>
+        <div className="max-w-2xl text-muted-foreground">{description}</div>
         {buttons !== false && buttons.length > 0 && (
           <div className="flex justify-center gap-4">
+            <Input type="email" placeholder="Enter your email for early access and offers" className="min-w-80 glass-3" />
             {buttons.map((button, index) => (
               <Button
                 key={index}
@@ -52,6 +59,7 @@ export default function CTA({
                   {button.text}
                   {button.iconRight}
                 </a>
+
               </Button>
             ))}
           </div>
