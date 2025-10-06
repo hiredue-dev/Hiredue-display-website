@@ -38,7 +38,7 @@ export function MetricsSection() {
             <br />for good design
           </h2>
           <p className="mt-6 max-w-xl text-base leading-6 text-muted-foreground md:text-lg md:leading-7">
-            Thousands of designers and developers have already used Launch UI to create beautiful and functional
+            Thousands of designers and developers have already used HireDue to create beautiful and functional
             websites and products.
           </p>
         </div>
