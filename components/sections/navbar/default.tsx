@@ -47,6 +47,8 @@ export default function Navbar({
     { text: "Getting Started", href: siteConfig.url },
     { text: "Components", href: siteConfig.url },
     { text: "Documentation", href: siteConfig.url },
+    { text: "about-us", href: siteConfig.onSiteUrl.aboutUs },
+    { text: "career", href: siteConfig.onSiteUrl.career },
   ],
   actions = [
     { text: "Sign in", href: siteConfig.url, isButton: false },
