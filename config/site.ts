@@ -2,8 +2,8 @@ export const siteConfig = {
   name: "HireDue",
   url: "https://www.hiredue.com",
 	onSiteUrl:{
-		aboutUs:"https://www.hiredue.com/about-us",
-		career:"https://www.hiredue.com/about-us"
+		aboutUs:"/about-us",
+		career:"/career"
 	},
   getStartedUrl:
     "https://hiredue.com/",

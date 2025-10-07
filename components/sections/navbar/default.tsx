@@ -44,11 +44,8 @@ export default function Navbar({
   name = "HireDue",
   homeUrl = siteConfig.url,
   mobileLinks = [
-    { text: "Getting Started", href: siteConfig.url },
-    { text: "Components", href: siteConfig.url },
-    { text: "Documentation", href: siteConfig.url },
-    { text: "about-us", href: siteConfig.onSiteUrl.aboutUs },
-    { text: "career", href: siteConfig.onSiteUrl.career },
+    { text: "Careers", href: siteConfig.onSiteUrl.career },
+    { text: "About Us", href: siteConfig.onSiteUrl.aboutUs },
   ],
   actions = [
     { text: "Sign in", href: siteConfig.url, isButton: false },
@@ -78,6 +75,39 @@ export default function Navbar({
             </a>
             {showNavigation && (customNavigation || <Navigation />)}
           </NavbarLeft>
+          <NavbarRight>
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="shrink-0 md:hidden"
+                >
+                  <Menu className="size-5" />
+                  <span className="sr-only">Toggle navigation menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right">
+                <nav className="grid gap-6 text-lg font-medium">
+                  <a
+                    href={homeUrl}
+                    className="flex items-center gap-2 text-xl font-bold"
+                  >
+                    <span>{name}</span>
+                  </a>
+                  {mobileLinks.map((link, index) => (
+                    <a
+                      key={index}
+                      href={link.href}
+                      className="text-muted-foreground hover:text-foreground"
+                    >
+                      {link.text}
+                    </a>
+                  ))}
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </NavbarRight>
         </NavbarComponent>
       </div>
     </header>
