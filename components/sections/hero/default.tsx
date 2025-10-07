@@ -121,7 +121,29 @@ export default function Hero({
           {mockup !== false && (
             <div className="relative w-full pt-12">
               <MockupFrame
-                className="animate-appear opacity-0 delay-700"
+                className="animate-appear absolute opacity-0 delay-700 transform -rotate-15"
+                size="small"
+              >
+                <Mockup
+                  type="responsive"
+                  className="bg-background/90 w-full rounded-xl border-0"
+                >
+                  {mockup}
+                </Mockup>
+              </MockupFrame>
+              <MockupFrame
+                className="animate-appear absolute opacity-0 delay-700 transform -rotate-15 translate-x-[4rem] md:translate-x-[10rem] translate-y-[2rem]"
+                size="small"
+              >
+                <Mockup
+                  type="responsive"
+                  className="bg-background/90 w-full rounded-xl border-0"
+                >
+                  {mockup}
+                </Mockup>
+              </MockupFrame>
+              <MockupFrame
+                className="animate-appear opacity-0 delay-700 transform -rotate-15 translate-x-[8rem] md:translate-x-[20rem] translate-y-[4rem]"
                 size="small"
               >
                 <Mockup

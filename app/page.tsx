@@ -14,12 +14,12 @@ export default function Home() {
   return (
     <main className="min-h-screen w-full overflow-hidden bg-background text-foreground">
       <Navbar />
-			<How/>
       <Hero />
       <Bento />
       <Platforms />
       <Why />
       <Metrics />
+			<How/>
       <Pricing />
       <FAQ />
       <CTA />
