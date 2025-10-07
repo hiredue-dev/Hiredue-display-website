@@ -71,7 +71,7 @@ export default function Hero({
   //   },
   // ],
   className,
-	textAlignment = "center"
+	textAlignment = "left"
 }: HeroProps) {
 	const {HeroTitle,HeroSubTitle,HeroSubTrigger,HeroTitlDescription} = useContent()
   return (

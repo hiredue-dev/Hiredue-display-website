@@ -8,11 +8,13 @@ import Pricing from "@/components/sections/pricing/default";
 import Why from "@/components/sections/why/default";
 import Metrics from "@/components/sections/metrics/default";
 import Bento from "@/components/sections/bento/default";
+import How from "@/components/sections/how/defualt";
 
 export default function Home() {
   return (
     <main className="min-h-screen w-full overflow-hidden bg-background text-foreground">
       <Navbar />
+			<How/>
       <Hero />
       <Bento />
       <Platforms />
