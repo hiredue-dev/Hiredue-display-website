@@ -60,6 +60,16 @@ export default function Navigation({
       isLink: true,
       href: siteConfig.url,
     },
+    {
+      title: "Careers",
+      isLink: true,
+      href: siteConfig.onSiteUrl.career,
+    },
+    {
+      title: "About Us",
+      isLink: true,
+      href: siteConfig.onSiteUrl.aboutUs,
+    }
   ],
   components = [
     {
