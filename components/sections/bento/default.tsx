@@ -12,7 +12,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Glow from "@/components/ui/glow";
 import Image from "next/image";
 
-const cardClass = "pt-4 rounded-lg shadow-md glass-3 from-brand-foreground/20 to-brand-foreground/0 bg-radial hover:from-brand-foreground/30 transition delay-150 duration-300 ease-in-out hover:to-brand-foreground/0";
+const cardClass = "pt-5 rounded-lg shadow-md glass-3 from-brand-foreground/20 to-brand-foreground/0 bg-radial hover:from-brand-foreground/30 transition delay-150 duration-300 ease-in-out hover:to-brand-foreground/0";
 // const cardClass = "pl-5 pt-4 rounded-lg shadow-md glass-3 from-brand-foreground/20 to-brand-foreground/0 bg-radial hover:from-brand-foreground/30 hover:to-brand-foreground/0 transition-all duration-3000";
 export default function Bento() {
   return (
@@ -27,11 +27,11 @@ export default function Bento() {
         {/* <div className="flex h-full w-full items-center justify-center p-10"> */}
         {/* ml-2 sm:mx-auto sm:mt-4 object-[center_2rem] transition-[object-position] delay-150 duration-300 ease-in-out hover:object-center */}
             <div className="grid h-full w-full gap-4 p-3 grid-cols-1 lg:grid-cols-10 rounded-lg shadow-md px-15 py-10">
-                <div className={cn("lg:col-span-4 col-span-1", cardClass)}>
+                <div className={cn("lg:col-span-4 col-span-1 px-4", cardClass)}>
                     <h2 className="pl-4 text-xl font-bold">Design-first</h2>
                     <div className="pl-4 mt-3 text-muted-foreground max-w-xs">Each block and component is carefully crafted to give a unique look and feel AI would never come up with</div>
                     <div className="overflow-hidden h-80">
-                    <Image src="/mobile-dark.png" alt="Design first" width={350} height={20} className=" mx-auto sm:mt-4 object-[center_2rem] transition-[object-position] delay-150 duration-300 ease-in-out hover:object-center"/>
+                    <Image src="/mobile-dark.png" alt="Design first" width={350} height={20} className="mx-auto mt-4 object-[center_2rem] transition-[object-position] delay-150 duration-300 ease-in-out hover:object-center"/>
                     </div>
                 </div>
                 <div className={cn("lg:col-span-6 col-span-1 ", cardClass)}>
