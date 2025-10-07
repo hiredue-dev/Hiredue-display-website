@@ -48,18 +48,15 @@ interface NavigationProps {
 export default function Navigation({
   menuItems = [
     {
-      title: "Getting started",
-      content: "default",
-    },
-    {
-      title: "Components",
-      content: "components",
-    },
-    {
-      title: "Documentation",
+      title: "Careers",
       isLink: true,
-      href: siteConfig.url,
+      href: siteConfig.onSiteUrl.career,
     },
+    {
+      title: "About Us",
+      isLink: true,
+      href: siteConfig.onSiteUrl.aboutUs,
+    }
   ],
   components = [
     {
