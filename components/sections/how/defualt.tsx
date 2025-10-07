@@ -43,7 +43,7 @@ export default function How() {
 				</p>
 			)}
 			</div>
-			<Horizontal className="hidden md:block" events={howWeDoItSections}></Horizontal>
+			<Horizontal className="hidden md:block translate-y-full mb-40"  events={howWeDoItSections}></Horizontal>
 			<Vertical className="block md:hidden" events={howWeDoItSections}></Vertical>
 		</div>
 		</Section>
