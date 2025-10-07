@@ -9,8 +9,9 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import { HowWeDoItSection } from "./defualt";
+import { cn } from "@/lib/utils";
 
-function TimeLineCardHorizontal({ events,className }: { events: HowWeDoItSection[] ,className:string}) {
+function TimeLineCardHorizontal({ events}: { events: HowWeDoItSection[] }) {
   const containerRef = useRef<HTMLOListElement|null>(null);
 
   useEffect(() => {
@@ -25,19 +26,21 @@ function TimeLineCardHorizontal({ events,className }: { events: HowWeDoItSection
 
       tl.to([dot, card], {
         opacity: 1,
-        boxShadow: "0 0 12px rgba(96,165,250,0.7)",
+        boxShadow: "0 0 10px rgba( 253, 186, 114,0.7)",
         duration: 0.8,
         ease: "power1.inOut",
       }).to([dot, card], {
         opacity: 1,
-        boxShadow: "0 0 0px rgba(0,0,0,0)",
+        boxShadow: "0 0 8px rgba( 253, 186, 114,1)",
         duration: 0.8,
         ease: "power1.inOut",
       });
     });
   }, []);
   return (
-		<div className={className}>
+		<div className="hidden md:flex justify-center translate-y-full items-start mb-20">
+		<div className="w-fit mr-3 text-center text-md h-fit translate-y-[-50%]
+		font-semibold sm:text-2xl ">Hire Due</div>
     <ol
 		ref={containerRef}
       className="relative flex gap-8 before:absolute before:-mt-px before:h-0.5 before:w-full before:rounded-full before:bg-gray-200 dark:before:bg-gray-700"
@@ -46,7 +49,7 @@ function TimeLineCardHorizontal({ events,className }: { events: HowWeDoItSection
 					index % 2==0 ? 
           <li key={index} className="relative -mt-1.5">
           <span className="block w-3 h-3 rounded-full bg-brand/70 opacity-30 shadow-lg shadow-brand"></span>
-          <Card className="mt-4 flex flex-col opacity-30 card-anim bg-muted card-anim">
+          <Card className="mt-4 flex flex-col opacity-30 card-anim bg-muted card-anim ">
             <CardContent>
               <CardHeader>{event.heading}</CardHeader>
               <CardDescription>{event.description}</CardDescription>
@@ -67,6 +70,8 @@ function TimeLineCardHorizontal({ events,className }: { events: HowWeDoItSection
 
         ))}
       </ol>
+		<div className="w-fit ml-3 text-center text-md h-fit translate-y-[-50%]
+		font-semibold sm:text-2xl ">Hired You</div>
 		</div>
   );
 }

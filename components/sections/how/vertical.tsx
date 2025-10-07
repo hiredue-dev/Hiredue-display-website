@@ -25,17 +25,17 @@ function TimeLineCardVertical({ events,className }: { events: HowWeDoItSection[]
 			const dot = item.querySelector("span");
 			const card = item.querySelector(".card-anim");
 
-			tl.to([dot, card], {
-				opacity: 1,
-				boxShadow: "0 0 10px rgba(96,165,250,0.7)",
-				duration: 0.8,
-				ease: "power1.inOut",
-			}).to([dot, card], {
-				opacity: 1,
-				boxShadow: "0 0 0px rgba(0,0,0,0)",
-				duration: 0.8,
-				ease: "power1.inOut",
-			});
+      tl.to([dot, card], {
+        opacity: 1,
+        boxShadow: "0 0 15px rgba( 253, 186, 114,0.7)",
+        duration: 0.8,
+        ease: "power1.inOut",
+      }).to([dot, card], {
+        opacity: 1,
+        boxShadow: "0 0 8px rgba( 253, 186, 114,1)",
+        duration: 0.8,
+        ease: "power1.inOut",
+      });
 		});
 	}, []);
 	return (
@@ -44,11 +44,13 @@ function TimeLineCardVertical({ events,className }: { events: HowWeDoItSection[]
 			ref={containerRef}
 			className="relative space-y-8 before:absolute before:-ml-px before:h-full before:w-0.5 before:rounded-full before:bg-gray-200 dark:before:bg-gray-700"
 		>
+		<div className="w-fit ml-3 text-center text-md h-fit
+		font-semibold sm:text-2xl">Hire Due</div>
 			{
 				events.map((event, idx) => (
 					<li key={idx} className="relative -ms-1.5 flex rounded-full items-start gap-4">
 						<span className="block w-2 h-2 rounded-full bg-brand/70 opacity-30 shadow-lg shadow-brand"></span>
-						<Card className="mt-4 flex flex-col opacity-30 card-anim">
+						<Card className="mt-4 flex flex-col opacity-30 bg-muted card-anim">
 							<CardContent>
 								<CardHeader>{event.heading}</CardHeader>
 								<CardDescription>{event.description}</CardDescription>
@@ -60,6 +62,8 @@ function TimeLineCardVertical({ events,className }: { events: HowWeDoItSection[]
 					</li>
 				))
 			}
+		<div className="w-fit ml-3 text-center text-md h-fit
+		font-semibold sm:text-2xl">Hired You</div>
 		</ol>
 		</div>
 	);
