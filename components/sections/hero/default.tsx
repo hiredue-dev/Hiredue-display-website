@@ -15,6 +15,7 @@ import { Section } from "../../ui/section";
 import { imageUrls } from "@/config/images";
 import { useContent } from "@/components/contexts/content-provider";
 
+
 interface HeroButtonProps {
   href: string;
   text: string;
@@ -73,7 +74,9 @@ export default function Hero({
   className,
 	textAlignment = "left"
 }: HeroProps) {
+
 	const {HeroTitle,HeroSubTitle,HeroSubTrigger,HeroTitlDescription} = useContent()
+
   return (
     <Section
       className={cn(
@@ -81,7 +84,7 @@ export default function Hero({
         className,
       )}
     >
-      <div className="max-w-container mx-auto flex flex-col gap-12 pt-16 sm:gap-24">
+      <div className="max-w-container mx-auto flex flex-col gap-12 pt-4 sm:gap-24">
         <div className={`flex flex-col 
 					items-${textAlignment ==="left"? "start": "center"} gap-6 
 					text-${textAlignment} sm:gap-12`}>
@@ -95,7 +98,7 @@ export default function Hero({
 				</a>
 			</Badge>
 
-          <h1 className="animate-appear from-foreground to-foreground dark:to-muted-foreground relative z-10 inline-block bg-linear-to-r bg-clip-text text-4xl leading-tight font-semibold text-balance text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-8xl md:leading-tight">
+          <h1 className="animate-appear from-foreground to-foreground dark:to-muted-foreground relative z-10 inline-block bg-linear-to-r bg-clip-text text-2xl leading-tight font-semibold text-balance text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-6xl md:leading-tight">
             {HeroTitle}
           </h1>
           <p className="text-md animate-appear text-muted-foreground relative z-10 max-w-[740px] font-medium text-balance opacity-0 delay-100 sm:text-xl">
@@ -119,9 +122,10 @@ export default function Hero({
           {/*     ))} */}
           {/*   </div>)} */}
           {mockup !== false && (
-            <div className="relative w-full pt-12">
+            <div className="relative w-full pt-16">
+						<div className="group h-fit">
               <MockupFrame
-                className="animate-appear absolute opacity-0 delay-700 transform -rotate-15"
+                className="animate-appear absolute opacity-0 delay-700 transform -rotate-15 group-hover:translate-x-[-10rem] group-hover:-rotate-5 duration-500"
                 size="small"
               >
                 <Mockup
@@ -132,7 +136,7 @@ export default function Hero({
                 </Mockup>
               </MockupFrame>
               <MockupFrame
-                className="animate-appear absolute opacity-0 delay-700 transform -rotate-15 translate-x-[4rem] md:translate-x-[10rem] translate-y-[2rem]"
+                className="animate-appear absolute opacity-0 delay-700 transform -rotate-15 translate-x-[4rem] md:translate-x-[10rem] translate-y-[2rem] group-hover:-rotate-5 duration-500"
                 size="small"
               >
                 <Mockup
@@ -143,7 +147,7 @@ export default function Hero({
                 </Mockup>
               </MockupFrame>
               <MockupFrame
-                className="animate-appear opacity-0 delay-700 transform -rotate-15 translate-x-[8rem] md:translate-x-[20rem] translate-y-[4rem]"
+                className="animate-appear opacity-0 delay-700 transform -rotate-15 translate-x-[8rem] md:translate-x-[20rem] translate-y-[4rem] group-hover:translate-x-[35rem] group-hover:-rotate-5 duration-500"
                 size="small"
               >
                 <Mockup
@@ -153,6 +157,7 @@ export default function Hero({
                   {mockup}
                 </Mockup>
               </MockupFrame>
+						</div>
               <Glow
                 variant="top"
                 className="animate-appear-zoom opacity-0 delay-1000"
