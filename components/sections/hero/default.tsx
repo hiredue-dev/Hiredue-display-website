@@ -1,3 +1,4 @@
+"use client"
 import { ArrowRightIcon } from "lucide-react";
 import { ReactNode } from "react";
 
@@ -11,8 +12,8 @@ import Glow from "../../ui/glow";
 import { Mockup, MockupFrame } from "../../ui/mockup";
 import Screenshot from "../../ui/screenshot";
 import { Section } from "../../ui/section";
-import { textConfig } from "@/config/texts";
 import { imageUrls } from "@/config/images";
+import { useContent } from "@/components/contexts/content-provider";
 
 interface HeroButtonProps {
   href: string;
@@ -33,8 +34,8 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title = textConfig.hero.tagline,
-  description = textConfig.hero.text,
+  title = "title",
+  description = "description",
   mockup = (
     <Screenshot
       srcLight={imageUrls.hero.banner.light}
@@ -48,10 +49,10 @@ export default function Hero({
   badge = (
     <Badge variant="outline" className="animate-appear">
       <span className="text-muted-foreground">
-				{textConfig.hero.comingSoon.message}
+			title
       </span>
       <a href={siteConfig.getStartedUrl} className="flex items-center gap-1">
-				{textConfig.hero.comingSoon.redirectMessage}
+				trigger
         <ArrowRightIcon className="size-3" />
       </a>
     </Badge>
@@ -72,6 +73,7 @@ export default function Hero({
   className,
 	textAlignment = "center"
 }: HeroProps) {
+	const {HeroTitle,HeroSubTitle,HeroSubTrigger,HeroTitlDescription} = useContent()
   return (
     <Section
       className={cn(
@@ -83,12 +85,21 @@ export default function Hero({
         <div className={`flex flex-col 
 					items-${textAlignment ==="left"? "start": "center"} gap-6 
 					text-${textAlignment} sm:gap-12`}>
-          {badge !== false && badge}
+			<Badge variant="outline" className="animate-appear">
+				<span className="text-muted-foreground">
+				{HeroSubTitle}
+				</span>
+				<a href={siteConfig.getStartedUrl} className="flex items-center gap-1">
+				{HeroSubTrigger}
+					<ArrowRightIcon className="size-3" />
+				</a>
+			</Badge>
+
           <h1 className="animate-appear from-foreground to-foreground dark:to-muted-foreground relative z-10 inline-block bg-linear-to-r bg-clip-text text-4xl leading-tight font-semibold text-balance text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-8xl md:leading-tight">
-            {title}
+            {HeroTitle}
           </h1>
           <p className="text-md animate-appear text-muted-foreground relative z-10 max-w-[740px] font-medium text-balance opacity-0 delay-100 sm:text-xl">
-            {description}
+            {HeroTitlDescription}
           </p>
           {/* {buttons !== false && buttons.length > 0 && ( */}
           {/*   <div className="animate-appear relative z-10 flex justify-center gap-4 opacity-0 delay-300"> */}

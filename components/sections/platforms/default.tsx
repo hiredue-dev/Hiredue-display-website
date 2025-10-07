@@ -10,7 +10,6 @@ import TypeScript from "@/public/logos/typescript";
 import { Badge } from "../../ui/badge";
 import Logo from "../../ui/logo";
 import { Section } from "../../ui/section";
-import { platform } from "@/config/platform";
 import Macos from "@/public/logos/macos";
 import Windows from "@/public/logos/windows";
 import Linux from "@/public/logos/linux";
@@ -23,10 +22,10 @@ interface PlatformsProps {
 }
 
 export default function Platforms({
-  title = platform.title,
+  title = "Supported Platforms",
   badge = (
     <Badge variant="outline" className="border-brand/30 text-brand">
-      Last updated: {siteConfig.stats.updated}
+      Last updated: {"5th oct 2025"}
     </Badge>
   ),
   logos = [
