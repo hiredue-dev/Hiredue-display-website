@@ -15,7 +15,7 @@ export default function Home() {
       <Hero />
       <Bento />
       <Platforms />
-      <Why />
+      {/* <Why /> */}
       <Metrics />
 			<How/>
       <Pricing />

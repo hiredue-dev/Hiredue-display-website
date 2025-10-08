@@ -36,31 +36,31 @@ export default function FooterSection({
   logo = <HireDue />,
   name = "HireDue",
   columns = [
-    {
-      title: "Product",
-      links: [
-        { text: "Changelog", href: siteConfig.url },
-        { text: "Documentation", href: siteConfig.url },
-      ],
-    },
+    // {
+    //   title: "Product",
+    //   links: [
+    //     { text: "Changelog", href: siteConfig.url },
+    //     { text: "Documentation", href: siteConfig.url },
+    //   ],
+    // },
     {
       title: "Company",
       links: [
         { text: "About Us", href: siteConfig.onSiteUrl.aboutUs },
         { text: "Careers", href: siteConfig.onSiteUrl.career },
-        { text: "Blog", href: siteConfig.url },
+        // { text: "Blog", href: siteConfig.url },
       ],
     },
-    {
-      title: "Contact",
-      links: [
-        { text: "Discord", href: siteConfig.url },
-        { text: "Twitter", href: siteConfig.url },
-        { text: "Github", href: siteConfig.links.github },
-      ],
-    },
+    // {
+    //   title: "Contact",
+    //   links: [
+    //     { text: "Discord", href: siteConfig.url },
+    //     { text: "Twitter", href: siteConfig.url },
+    //     { text: "Github", href: siteConfig.links.github },
+    //   ],
+    // },
   ],
-  copyright = "© 2025 Mikołaj Dobrucki. All rights reserved",
+  copyright = "© 2025 HireDue. All rights reserved",
   policies = [
     { text: "Privacy Policy", href: siteConfig.url },
     { text: "Terms of Service", href: siteConfig.url },
@@ -72,16 +72,17 @@ export default function FooterSection({
     <footer className={cn("bg-background w-full px-4", className)}>
       <div className="max-w-container mx-auto">
         <Footer>
-          <FooterContent>
-            <FooterColumn className="col-span-2 sm:col-span-3 md:col-span-1">
-              <div className="flex items-center gap-2">
+          <FooterContent className="border-border/15 border-t pt-4">
+            <FooterColumn className="col-span-2 sm:col-span-3 md:col-span-4">
+              <div className="flex items-center justify-center lg:justify-start gap-2">
                 {logo}
                 <h3 className="text-xl font-bold">{name}</h3>
               </div>
             </FooterColumn>
             {columns.map((column, index) => (
-              <FooterColumn key={index}>
-                <h3 className="text-md pt-1 font-semibold">{column.title}</h3>
+              // <FooterColumn key={index}>
+              // <h3 className="text-md pt-1 flex font-semibold">{column.title}</h3>
+              <div className="col-span-2 flex flex-col lg:flex-row items-center justify-center gap-7 lg:col-span-1" key={index}>
                 {column.links.map((link, linkIndex) => (
                   <a
                     key={linkIndex}
@@ -91,10 +92,11 @@ export default function FooterSection({
                     {link.text}
                   </a>
                 ))}
-              </FooterColumn>
+              </div>
+              // </FooterColumn>
             ))}
           </FooterContent>
-          <FooterBottom>
+          {/* <FooterBottom>
             <div>{copyright}</div>
             <div className="flex items-center gap-4">
               {policies.map((policy, index) => (
@@ -104,7 +106,7 @@ export default function FooterSection({
               ))}
               {showModeToggle && <ModeToggle />}
             </div>
-          </FooterBottom>
+          </FooterBottom> */}
         </Footer>
       </div>
     </footer>
