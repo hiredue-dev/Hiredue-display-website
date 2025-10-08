@@ -18,7 +18,6 @@ export default function Home() {
       <Why />
       <Metrics />
 			<How/>
-      <Metrics />
 
       <FAQ />
       <CTA />

@@ -45,7 +45,7 @@ export default function Navbar({
   homeUrl = siteConfig.url,
   mobileLinks = [
     { text: "Careers", href: siteConfig.onSiteUrl.career },
-    { text: "About Us", href: siteConfig.onSiteUrl.aboutUs },
+    // { text: "About Us", href: siteConfig.onSiteUrl.aboutUs },
   ],
   actions = [
     { text: "Sign in", href: siteConfig.url, isButton: false },
