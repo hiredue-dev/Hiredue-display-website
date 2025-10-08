@@ -18,8 +18,6 @@ export default function Home() {
       <Why />
       <Metrics />
 			<How/>
-
-      <FAQ />
       <CTA />
       <Footer />
     </main>
