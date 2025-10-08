@@ -12,7 +12,7 @@ import Bento from "@/components/sections/bento/default";
 export default function Home() {
   return (
     <main className="min-h-screen w-full overflow-hidden bg-background text-foreground">
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero className="md:py-24"/>
       <Footer />
     </main>
