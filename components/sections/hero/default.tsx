@@ -81,11 +81,11 @@ export default function Hero({
   return (
     <Section
       className={cn(
-        "fade-bottom overflow-hidden pb-0 sm:pb-0 md:pb-0",
+        "fade-bottom overflow-hidden pb-0 sm:pb-0 md:pb-0 -mt-10",
         className,
       )}
     >
-      <div className="max-w-container mx-auto flex flex-col gap-12 pt-4 sm:gap-24">
+      <div className="max-w-container mx-auto flex flex-col gap-12 sm:gap-24">
         <div className={`flex flex-col 
 					items-${textAlignment ==="left"? "start": "center"} gap-6 
 					text-${textAlignment} sm:gap-12`}>
