@@ -1,5 +1,5 @@
 "use client"
-import { ArrowRightIcon } from "lucide-react";
+import { ArrowRight, ArrowRightIcon } from "lucide-react";
 import { ReactNode } from "react";
 
 import { siteConfig } from "@/config/site";
@@ -14,6 +14,7 @@ import Screenshot from "../../ui/screenshot";
 import { Section } from "../../ui/section";
 import { imageUrls } from "@/config/images";
 import { useContent } from "@/components/contexts/content-provider";
+import { Input } from "@/components/ui/input";
 
 
 interface HeroButtonProps {
@@ -121,6 +122,26 @@ export default function Hero({
           {/*       </Button> */}
           {/*     ))} */}
           {/*   </div>)} */}
+					{/* Custom CTA */}
+
+          <div className="z-20 flex md:flex-col justify-center gap-4">
+            <Input type="email" placeholder="Enter your email for early access and offers" className="w-fit md:min-w-85 h-10 px-4 py-2 glass-3 placeholder:truncate" ></Input>
+              <Button 
+                variant="default"
+                size="lg"
+                asChild
+              >
+                <a href="">
+								<span className="hidden md:flex items-center">
+									Get Early Access
+								</span>
+									<ArrowRight className="md:ml-2 h-4 w-4" />
+                </a>
+
+              </Button>
+          </div>
+					{/* Custom CTA */}
+
           {mockup !== false && (
             <div className="relative w-full pt-16">
 						<div className="group h-fit">
