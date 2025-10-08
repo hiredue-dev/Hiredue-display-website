@@ -72,9 +72,9 @@ export default function FooterSection({
     <footer className={cn("bg-background w-full px-4", className)}>
       <div className="max-w-container mx-auto">
         <Footer>
-          <FooterContent>
-            <FooterColumn className="col-span-2 sm:col-span-3 md:col-span-1">
-              <div className="flex items-center gap-2">
+          <FooterContent className="border-border/15 border-t pt-4">
+            <FooterColumn className="col-span-2 sm:col-span-3 md:col-span-4">
+              <div className="flex items-center justify-center lg:justify-start gap-2">
                 {logo}
                 <h3 className="text-xl font-bold">{name}</h3>
               </div>
@@ -82,7 +82,7 @@ export default function FooterSection({
             {columns.map((column, index) => (
               // <FooterColumn key={index}>
               // <h3 className="text-md pt-1 flex font-semibold">{column.title}</h3>
-              <div className="flex items-center justify-center gap-4" key={index}>
+              <div className="col-span-2 flex flex-col lg:flex-row items-center justify-center gap-7 lg:col-span-1" key={index}>
                 {column.links.map((link, linkIndex) => (
                   <a
                     key={linkIndex}
@@ -96,17 +96,17 @@ export default function FooterSection({
               // </FooterColumn>
             ))}
           </FooterContent>
-          <FooterBottom>
+          {/* <FooterBottom>
             <div>{copyright}</div>
-            {/* <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4">
               {policies.map((policy, index) => (
                 <a key={index} href={policy.href}>
                   {policy.text}
                 </a>
               ))}
               {showModeToggle && <ModeToggle />}
-            </div> */}
-          </FooterBottom>
+            </div>
+          </FooterBottom> */}
         </Footer>
       </div>
     </footer>
