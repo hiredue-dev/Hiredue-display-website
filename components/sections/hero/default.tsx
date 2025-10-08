@@ -40,8 +40,8 @@ export default function Hero({
 	description = "description",
 	mockup = (
 		<Screenshot
-			srcLight={imageUrls.hero.banner.light}
-			srcDark={imageUrls.hero.banner.dark}
+			srcLight={imageUrls.hero.banner.third.light}
+			srcDark={imageUrls.hero.banner.third.dark}
 			alt="HireDue app screenshot"
 			width={1248}
 			height={765}
