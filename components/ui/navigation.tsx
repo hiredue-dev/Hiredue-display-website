@@ -52,11 +52,11 @@ export default function Navigation({
       isLink: true,
       href: siteConfig.onSiteUrl.career,
     },
-    // {
-    //   title: "About Us",
-    //   isLink: true,
-    //   href: siteConfig.onSiteUrl.aboutUs,
-    // }
+    {
+      title: "About Us",
+      isLink: true,
+      href: siteConfig.onSiteUrl.aboutUs,
+    }
   ],
   components = [
     {

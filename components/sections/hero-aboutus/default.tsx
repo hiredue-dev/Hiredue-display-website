@@ -11,6 +11,7 @@ import Glow from "../../ui/glow";
 import { Mockup, MockupFrame } from "../../ui/mockup";
 import Screenshot from "../../ui/screenshot";
 import { Section } from "../../ui/section";
+import { imageUrls } from "@/config/images";
 
 interface HeroButtonProps {
   href: string;
@@ -30,17 +31,17 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title = "Give your big idea the design it deserves",
-  description = "Professionally designed blocks and templates built with React, Shadcn/ui and Tailwind that will help your product stand out.",
+  title = "Who are we ?",
+  description = "At HireDue, we’re a team of engineers currently working in top global tech companies like Amazon, Visa, and others, united by a shared vision to make the job application journey smarter and faster. We’ve experienced firsthand how talented candidates waste countless hours filling out repetitive forms, logging into multiple portals, and tracking applications manually — so we built HireDue to change that. Our mission is to automate the tedious parts of job hunting, allowing professionals to focus on what truly matters: showcasing their skills. With intelligent browser automation, AI-driven analytics, and personalized message generation, HireDue streamlines every step of your application process — securely running on your local machine to keep your credentials private and safe.",
   mockup = (
     <Screenshot
-      srcLight="/dashboard-light.png"
-      srcDark="/dashboard-dark.png"
-      alt="HireDue app screenshot"
-      width={1248}
-      height={765}
-      className="w-full"
-    />
+                          srcLight={imageUrls.hero.banner.first.light}
+                          srcDark={imageUrls.hero.banner.first.dark}
+                          alt="HireDue app screenshot"
+                          width={1248}
+                          height={765}
+                          className="w-full"
+                        />
   ),
   badge = (
     <Badge variant="outline" className="animate-appear">
@@ -85,24 +86,7 @@ export default function Hero({
           <p className="text-md animate-appear text-muted-foreground relative z-10 max-w-[740px] font-medium text-balance opacity-0 delay-100 sm:text-xl">
             {description}
           </p>
-          {buttons !== false && buttons.length > 0 && (
-            <div className="animate-appear relative z-10 flex justify-center gap-4 opacity-0 delay-300">
-              {buttons.map((button, index) => (
-                <Button
-                  key={index}
-                  variant={button.variant || "default"}
-                  size="lg"
-                  asChild
-                >
-                  <a href={button.href}>
-                    {button.icon}
-                    {button.text}
-                    {button.iconRight}
-                  </a>
-                </Button>
-              ))}
-            </div>
-          )}
+         
           {mockup !== false && (
             <div className="relative w-full pt-12">
               <MockupFrame
