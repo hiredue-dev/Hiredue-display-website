@@ -46,7 +46,7 @@ export default function FooterSection({
     {
       title: "Company",
       links: [
-        { text: "About Us", href: siteConfig.onSiteUrl.aboutUs },
+        // { text: "About Us", href: siteConfig.onSiteUrl.aboutUs },
         { text: "Careers", href: siteConfig.onSiteUrl.career },
         // { text: "Blog", href: siteConfig.url },
       ],

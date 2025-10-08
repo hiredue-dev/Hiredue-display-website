@@ -17,15 +17,15 @@ import { useContent } from "@/components/contexts/content-provider";
 const cardClass = "pt-5 rounded-lg shadow-md glass-3 from-brand-foreground/20 to-brand-foreground/0 bg-radial hover:from-brand-foreground/30 transition delay-150 duration-300 ease-in-out hover:to-brand-foreground/0";
 // const cardClass = "pl-5 pt-4 rounded-lg shadow-md glass-3 from-brand-foreground/20 to-brand-foreground/0 bg-radial hover:from-brand-foreground/30 hover:to-brand-foreground/0 transition-all duration-3000";
 export default function Bento() {
-    const {howWeDoItTitle, howWeDoItTitleDescription, howWeDoItHeading1, howWeDoItDescription1, howWeDoItHeading2, howWeDoItDescription2, howWeDoItHeading3, howWeDoItDescription3, howWeDoItHeading4, howWeDoItDescription4, howWeDoItHeading5, howWeDoItDescription5, howWeDoItHeading6, howWeDoItDescription6} = useContent();
+    const {whatIsHireduetitle, whatIsHireDueTitleDescription, whatIsHiredueHeading1, whatIsHiredueDescription1, whatIsHiredueHeading2, whatIsHiredueDescription2, whatIsHiredueHeading3, whatIsHiredueDescription3, whatIsHiredueHeading4, whatIsHiredueDescription4, whatIsHiredueHeading5, whatIsHiredueDescription5, whatIsHiredueHeading6, whatIsHiredueDescription6} = useContent();
   return (
     <Section className={cn("group relative overflow-hidden")}>
         <div className="max-w-container relative z-10 mx-auto flex flex-col items-center gap-6 text-center sm:gap-8">
         <h2 className="max-w-[640px] text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight">
-            {howWeDoItTitle}
+            {whatIsHireduetitle}
         </h2>
         <div className="max-w-3xl text-muted-foreground text-xl">
-            {howWeDoItTitleDescription}
+            {whatIsHireDueTitleDescription}
             </div>
         </div>
 
@@ -33,31 +33,31 @@ export default function Bento() {
         {/* ml-2 sm:mx-auto sm:mt-4 object-[center_2rem] transition-[object-position] delay-150 duration-300 ease-in-out hover:object-center */}
             <div className="grid h-full w-full gap-4 p-3 grid-cols-1 lg:grid-cols-10 rounded-lg shadow-md px-5 sm:px-15 py-10">
                 <div className={cn("lg:col-span-4 col-span-1 px-4", cardClass)}>
-                    <h2 className="pl-4 text-xl font-bold">{howWeDoItHeading1}</h2>
-                    <div className="pl-4 mt-3 text-muted-foreground max-w-xs">{howWeDoItDescription1}</div>
+                    <h2 className="pl-4 text-xl font-bold">{whatIsHiredueHeading1}</h2>
+                    <div className="pl-4 mt-3 text-muted-foreground max-w-xs">{whatIsHiredueDescription1}</div>
                     <div className="overflow-hidden h-80">
                     <Image src="/phone-image.png" alt="Design first" width={350} height={20} className="mx-auto mt-4 object-[center_2rem] transition-[object-position] delay-150 duration-300 ease-in-out hover:object-center"/>
                     </div>
                 </div>
                 <div className={cn("lg:col-span-6 col-span-1 ", cardClass)}>
-                    <h2 className="pl-4 text-xl font-bold">{howWeDoItHeading2}</h2>
-                    <div className="pl-4 mt-3 text-muted-foreground max-w-lg">{howWeDoItDescription2}</div>
+                    <h2 className="pl-4 text-xl font-bold">{whatIsHiredueHeading2}</h2>
+                    <div className="pl-4 mt-3 text-muted-foreground max-w-lg">{whatIsHiredueDescription2}</div>
                     <div className="overflow-hidden h-80">
                     <Image src="/image.png" alt="Design first" width={300} height={20} className="mx-auto transition-all delay-150 duration-300 ease-in-out hover:object-center scale-120 sm:scale-180 hover:scale-200"/>
                     </div>
                 </div>
 
                 <div className={cn("lg:col-span-6 col-span-1", cardClass)}>
-                    <h2 className="pl-4 text-xl font-bold">{howWeDoItHeading3}</h2>
-                    <div className="pl-4 mt-3 text-muted-foreground max-w-lg">{howWeDoItDescription3}</div>
+                    <h2 className="pl-4 text-xl font-bold">{whatIsHiredueHeading3}</h2>
+                    <div className="pl-4 mt-3 text-muted-foreground max-w-lg">{whatIsHiredueDescription3}</div>
                     <div className="overflow-hidden">
                     <Image src="/resume.png" alt="Design first" width={675} height={20} className="mx-auto mt-4 object-[center_2rem] transition-[object-position] delay-150 duration-300 ease-in-out hover:object-center"/>
                     </div>
 
                 </div>
                 <div className={cn("lg:col-span-4 col-span-1", cardClass)}>
-                    <h2 className="pl-4 text-xl font-bold">{howWeDoItHeading4}</h2>
-                    <div className="pl-4 mt-3 text-muted-foreground max-w-sm">{howWeDoItDescription4}</div>
+                    <h2 className="pl-4 text-xl font-bold">{whatIsHiredueHeading4}</h2>
+                    <div className="pl-4 mt-3 text-muted-foreground max-w-sm">{whatIsHiredueDescription4}</div>
                     <div className="overflow-hidden h-90">
                         <div className="flex grow items-end justify-center">
                             <div data-slot="globe-illustration" className="flex items-center">
@@ -78,16 +78,16 @@ export default function Bento() {
                 </div>
 
                 <div className={cn("lg:col-span-4 col-span-1", cardClass)}>
-                    <h2 className="pl-4 text-xl font-bold">{howWeDoItHeading5}</h2>
-                    <div className="pl-4 mt-3 text-muted-foreground max-w-sm">{howWeDoItDescription5}
+                    <h2 className="pl-4 text-xl font-bold">{whatIsHiredueHeading5}</h2>
+                    <div className="pl-4 mt-3 text-muted-foreground max-w-sm">{whatIsHiredueDescription5}
                     </div>
                     <div className="overflow-hidden h-full">
                     <Image src="/chat2.png" alt="Design first" width={400} height={20} className="mx-auto mt-4 object-[center_1.5rem] transition-[object-position] delay-150 duration-300 ease-in-out hover:object-center"/>
                     </div>
                 </div>
                 <div className={cn("lg:col-span-6 col-span-1", "pt-5 rounded-lg shadow-md glass-3 from-brand-foreground/20 to-brand-foreground/0 bg-radial transition delay-150 duration-300 ease-in-out hover:to-brand-foreground/0")}>
-                    <h2 className="pl-4 text-xl font-bold">{howWeDoItHeading6}</h2>
-                    <div className="pl-4 mt-3 text-muted-foreground max-w-sm">{howWeDoItDescription6}</div>
+                    <h2 className="pl-4 text-xl font-bold">{whatIsHiredueHeading6}</h2>
+                    <div className="pl-4 mt-3 text-muted-foreground max-w-sm">{whatIsHiredueDescription6}</div>
                     <div className="overflow-hidden h-full">
                     <Image src="/Technological Radar with Logos.png" alt="Design first" width={425} height={20} className="mx-auto mt-4 object-[center_1.5rem] transition-[object-position] delay-150 duration-300 ease-in-out hover:object-center"/>
                     </div>
