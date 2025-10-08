@@ -61,9 +61,9 @@ export default function Navbar({
   className,
 }: NavbarProps) {
   return (
-    <header className={cn("sticky top-0 z-50 -mb-4 px-4 pb-2", className)}>
+    <header className={cn("sticky md:px-2 top-0 z-50 -mb-4 px-4 mb:-px-2 pb-2", className)}>
       <div className="fade-bottom bg-background/15 absolute left-0 h-24 w-full backdrop-blur-lg"></div>
-      <div className="max-w-container relative mx-auto">
+      <div className="max-w-container relative mx-auto md:mx-20">
         <NavbarComponent>
           <NavbarLeft>
             <a

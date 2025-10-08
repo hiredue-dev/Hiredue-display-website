@@ -20,32 +20,33 @@ function TimeLineCardVertical({ events,className }: { events: HowWeDoItSection[]
 		const items = containerRef.current.querySelectorAll("li");
 
 		const tl = gsap.timeline({ repeatDelay: 0.5 });
+		const animationDuration = 0.6
 		tl.set([prefixRef.current,suffixRef.current],{opacity:0.3, color:"white"})
 		tl.to(prefixRef.current,{
         opacity: 1,
 				color:"rgba(253, 186, 114)",
-        duration: 0.8,
+        duration:animationDuration,
         ease: "power1.inOut",
 		})
 		items.forEach((item) => {
-			const dot = item.querySelector("span");
-			const card = item.querySelector(".card-anim");
+      const dot = item.querySelector("span");
+      const card = item.querySelector(".card-anim");
 
       tl.to([dot, card], {
         opacity: 1,
-        duration: 0.8,
+        duration:animationDuration,
         ease: "power1.inOut",
       }).to([dot, card], {
         opacity: 1,
-        duration: 0.8,
+        duration: 0.6,
         ease: "power1.inOut",
       });
-		});
+    });
 		tl.to(suffixRef.current,{
         opacity: 1,
-        duration: 0.8,
+        duration:animationDuration,
 				color:"rgba(253, 186, 114)",
-        ease: "power1.in",
+        ease: "power1.inOut",
 		})  
 	}, []);
 
