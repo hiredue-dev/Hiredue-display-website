@@ -124,7 +124,7 @@ export default function Hero({
           {/*   </div>)} */}
 					{/* Custom CTA */}
 
-          <div className="z-20 flex md:flex-col justify-center gap-4">
+          <div className="z-20 flex justify-center gap-4">
             <Input type="email" placeholder="Enter your email for early access and offers" className="w-fit md:min-w-85 h-10 px-4 py-2 glass-3 placeholder:truncate" ></Input>
               <Button 
                 variant="default"
