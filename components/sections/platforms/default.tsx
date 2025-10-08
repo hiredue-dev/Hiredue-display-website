@@ -17,6 +17,7 @@ import Linux from "@/public/logos/linux";
 import { Badge } from "../../ui/badge";
 import Logo from "../../ui/logo";
 import { Section } from "../../ui/section";
+import HireDue from "@/public/logos/hiredue";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,14 +36,15 @@ export default function Platforms({
     </Badge>
   ),
   logos = [
-    <Logo key="figma" image={Figma} name="Figma" />,
-    <Logo key="react" image={ReactLogo} name="React" version="19.1.1" />,
-    <Logo key="typescript" image={TypeScript} name="TypeScript" version="5.9.2" />,
-    <Logo key="macos" image={Macos} name="MacOS" version="5.9+" />,
-    <Logo key="windows" image={Windows} name="Windows" version="7.0+" />,
-    <Logo key="linux" image={Linux} name="Linux" badge="New" />,
-    <Logo key="shadcn" image={ShadcnUi} name="Shadcn/ui" version="2.10.0" />,
-    <Logo key="tailwind" image={Tailwind} name="Tailwind" version="4.1" />,
+    <Logo  image={Windows} key="linkedin" name="linkedin" />,
+    <Logo  image={Windows} key="Naukri" name="Naukri" />,
+    <Logo  image={Windows} key="GlassDoor" name="GlassDoor" />,
+    <Logo  image={Windows} key="Indeed" name="Indeed" />,
+    <Logo  image={Windows} key="Workday" name="Workday" />,
+    <Logo  image={Windows} key="Meta" name="Meta" />,
+    <Logo  image={Windows} key="Google" name="Google" />,
+    <Logo  image={Windows} key="Amazon" name="Amazon" />,
+    <Logo  image={Windows} key="Apple" name="Apple" />,
   ],
   className,
 }: PlatformsProps) {
