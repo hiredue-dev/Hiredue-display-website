@@ -213,3 +213,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+@theme {  
+	--animate-marquee: marquee 30s linear infinite alternate-reverse;  
+	@keyframes marquee {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.--animate-marquee{
+	animation: var(--animate-marquee)
+}
+.--animate-marquee:hover{
+		animation-play-state:paused;
+}

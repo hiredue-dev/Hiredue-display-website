@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { inter } from "@/lib/fonts";
 import { ThemeProvider } from "@/components/contexts/theme-provider";
+import Navbar from "@/components/sections/navbar/default";
 
 export const metadata: Metadata = {
   title: {
@@ -67,7 +68,10 @@ export default function RootLayout({
   return (
     <html lang="en" style={{ colorScheme: "dark" }} className="dark">
       <body className={`${inter.className} bg-background antialiased`}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+				<Navbar/>
+				{children}
+				</ThemeProvider>
       </body>
     </html>
   );
