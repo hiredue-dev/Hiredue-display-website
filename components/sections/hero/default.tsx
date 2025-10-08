@@ -158,7 +158,14 @@ export default function Hero({
 										type="responsive"
 										className="bg-background/90 w-full rounded-xl border-0"
 									>
-										{mockup}
+			<Screenshot
+				srcLight={imageUrls.hero.banner.third.light}
+				srcDark={imageUrls.hero.banner.third.dark}
+				alt="HireDue app screenshot"
+				width={1248}
+				height={765}
+				className="w-full"
+			/>
 									</Mockup>
 								</MockupFrame>
 								<MockupFrame
@@ -169,7 +176,14 @@ export default function Hero({
 										type="responsive"
 										className="bg-background/90 w-full rounded-xl border-0"
 									>
-										{mockup}
+			<Screenshot
+				srcLight={imageUrls.hero.banner.second.light}
+				srcDark={imageUrls.hero.banner.second.dark}
+				alt="HireDue app screenshot"
+				width={1248}
+				height={765}
+				className="w-full"
+			/>
 									</Mockup>
 								</MockupFrame>
 								<MockupFrame
@@ -180,7 +194,14 @@ export default function Hero({
 										type="responsive"
 										className="bg-background/90 w-full rounded-xl border-0"
 									>
-										{mockup}
+			<Screenshot
+				srcLight={imageUrls.hero.banner.first.light}
+				srcDark={imageUrls.hero.banner.first.dark}
+				alt="HireDue app screenshot"
+				width={1248}
+				height={765}
+				className="w-full"
+			/>
 									</Mockup>
 								</MockupFrame>
 							</div>
