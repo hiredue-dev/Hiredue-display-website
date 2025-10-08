@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "HireDue",
-  url: "https://www.hiredue.com",
+  url: "/",
 	onSiteUrl:{
 		aboutUs:"/about-us",
 		career:"/career"

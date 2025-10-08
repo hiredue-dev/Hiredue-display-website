@@ -36,31 +36,31 @@ export default function FooterSection({
   logo = <HireDue />,
   name = "HireDue",
   columns = [
-    {
-      title: "Product",
-      links: [
-        { text: "Changelog", href: siteConfig.url },
-        { text: "Documentation", href: siteConfig.url },
-      ],
-    },
+    // {
+    //   title: "Product",
+    //   links: [
+    //     { text: "Changelog", href: siteConfig.url },
+    //     { text: "Documentation", href: siteConfig.url },
+    //   ],
+    // },
     {
       title: "Company",
       links: [
         { text: "About Us", href: siteConfig.onSiteUrl.aboutUs },
         { text: "Careers", href: siteConfig.onSiteUrl.career },
-        { text: "Blog", href: siteConfig.url },
+        // { text: "Blog", href: siteConfig.url },
       ],
     },
-    {
-      title: "Contact",
-      links: [
-        { text: "Discord", href: siteConfig.url },
-        { text: "Twitter", href: siteConfig.url },
-        { text: "Github", href: siteConfig.links.github },
-      ],
-    },
+    // {
+    //   title: "Contact",
+    //   links: [
+    //     { text: "Discord", href: siteConfig.url },
+    //     { text: "Twitter", href: siteConfig.url },
+    //     { text: "Github", href: siteConfig.links.github },
+    //   ],
+    // },
   ],
-  copyright = "© 2025 Mikołaj Dobrucki. All rights reserved",
+  copyright = "© 2025 HireDue. All rights reserved",
   policies = [
     { text: "Privacy Policy", href: siteConfig.url },
     { text: "Terms of Service", href: siteConfig.url },
@@ -80,8 +80,9 @@ export default function FooterSection({
               </div>
             </FooterColumn>
             {columns.map((column, index) => (
-              <FooterColumn key={index}>
-                <h3 className="text-md pt-1 font-semibold">{column.title}</h3>
+              // <FooterColumn key={index}>
+              // <h3 className="text-md pt-1 flex font-semibold">{column.title}</h3>
+              <div className="flex items-center justify-center gap-4" key={index}>
                 {column.links.map((link, linkIndex) => (
                   <a
                     key={linkIndex}
@@ -91,19 +92,20 @@ export default function FooterSection({
                     {link.text}
                   </a>
                 ))}
-              </FooterColumn>
+              </div>
+              // </FooterColumn>
             ))}
           </FooterContent>
           <FooterBottom>
             <div>{copyright}</div>
-            <div className="flex items-center gap-4">
+            {/* <div className="flex items-center gap-4">
               {policies.map((policy, index) => (
                 <a key={index} href={policy.href}>
                   {policy.text}
                 </a>
               ))}
               {showModeToggle && <ModeToggle />}
-            </div>
+            </div> */}
           </FooterBottom>
         </Footer>
       </div>
