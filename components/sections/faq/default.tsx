@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ReactNode } from "react";
 
 import { siteConfig } from "@/config/site";
+// import { useContent } from "@/components/contexts/content-provider";
 
 import {
   Accordion,
@@ -24,128 +25,67 @@ interface FAQProps {
 }
 
 export default function FAQ({
+  
   title = "Questions and Answers",
   items = [
     {
       question:
-        "Why building a great landing page is critical for your business?",
+        "Is my data safe?",
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
-            In today&apos;s AI-driven world, standing out is harder than ever.
-            While anyone can build a product, a professional landing page makes
-            the difference between success and failure.
-          </p>
-          <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
-            HireDue helps you ship faster without compromising on quality.
+            100%. Everything runs locally on your machine — no cloud storage, no third-party access. Your credentials and personal info stay with you, always.
           </p>
         </>
       ),
     },
     {
-      question: "Why use HireDue instead of a no-code tool?",
+      question: "When do I get notified?",
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[600px]">
-            No-code tools lock you into their ecosystem with recurring fees and
-            limited control. They often come with performance issues and make it
-            difficult to integrate with your product.
-          </p>
-          <p className="text-muted-foreground mb-4 max-w-[600px]">
-            You can&apos;t even change your hosting provider and basic things
-            like web analytics come as extra costs and paid add-ons.
-          </p>
-          <p className="text-muted-foreground mb-4 max-w-[600px]">
-            What might seem like a convenient solution today could paint you
-            into a corner tomorrow, limiting your ability to scale and adapt.
-            HireDue gives you full control of your code while maintaining
-            professional quality.
+            You’ll get alerts as soon as your application status changes, or when a new opportunity matches your profile or only get notified when anything major happens like getting a response from a recruiter. Notifications are fully customizable — you’re always in control.
           </p>
         </>
       ),
     },
     {
       question:
-        "How HireDue is different from other components libraries and templates?",
+        "Is it available on the phone?",
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[580px]">
-            HireDue stands out with premium design quality and delightful
-            touches of custom animations and illustrations.
-          </p>
-          <p className="text-muted-foreground mb-4 max-w-[580px]">
-            All components are carefully crafted to help position your product
-            as a professional tool, avoiding the generic template look.
-          </p>
-          <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
-            Unlike many libraries that rely on outdated CSS practices and old
-            dependencies, HireDue is built with modern technologies and best
-            practices in mind.
+            Absolutely! The HireDue mobile app lets you view your dashboard, track progress, and receive instant job alerts wherever you are.
           </p>
         </>
       ),
     },
     {
-      question: 'Why exactly does it mean that "The code is yours"?',
+      question: 'Do I need to pay to get started?',
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[580px]">
-            The basic version of HireDue is open-source and free forever,
-            under a do-whatever-you-want license.
-          </p>
-          <p className="text-muted-foreground mb-4 max-w-[580px]">
-            The pro version that contains more components and options is a
-            one-time purchase that gives you lifetime access to all current and
-            future content. Use it for unlimited personal and commercial
-            projects - no recurring fees or restrictions.
-          </p>
-          <p className="text-muted-foreground mb-4 max-w-[580px]">
-            For complete details about licensing and usage rights, check out{" "}
-            <Link href="/pricing" className="text-foreground underline">
-              the pricing page
-            </Link>
-            .
+            Nope — HireDue’s beta is completely free. Once launched, you’ll have flexible pricing options, including a free plan for core automation features.
           </p>
         </>
       ),
     },
     {
-      question: "Are Figma files included?",
+      question: "Which platforms does HireDue work with?",
       answer: (
         <p className="text-muted-foreground mb-4 max-w-[580px]">
-          Yes! The complete HireDue template is available for free on the{" "}
-          <Link
-            href="https://www.figma.com/"
-            className="text-foreground underline"
-          >
-            Figma community
-          </Link>
-          .
+          HireDue seamlessly integrates with LinkedIn, Naukri, Gmail, and major company portals — with more platforms being added every month.
         </p>
       ),
     },
-    {
-      question: "Can I get a discount?",
-      answer: (
-        <>
-          <p className="text-muted-foreground mb-4 max-w-[580px]">
-            Actually, yes! I&apos;m always acively looking for beta testers of
-            new features. If you are interested in exchanging feedback for a
-            discount, please contact me via{" "}
-            <a
-              href={siteConfig.links.email}
-              className="underline underline-offset-2"
-            >
-              email
-            </a>
-            .
-          </p>
-        </>
-      ),
-    },
+    
   ],
   className,
 }: FAQProps) {
+
+  // const { faqQuestion1,faqQuestion2,faqQuestion3,faqQuestion4,faqQuestion5, faqAnswer1, faqAnswer2, faqAnswer3, faqAnswer4,faqAnswer5 } = useContent()
+  
+
   return (
     <Section className={className}>
       <div className="max-w-container mx-auto flex flex-col items-center gap-8">
