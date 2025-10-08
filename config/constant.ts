@@ -74,3 +74,15 @@ export const whyHiredueNumberHeading4= "Zero Effort Networking"
  export const whyHiredueNumber4= "0"
  export const whyHiredueNumberDescription4= "HireDue builds your professional network automatically — connecting you with recruiters and hiring managers while you rest."
 
+
+export const faqQuestion1= "Is my data safe?"
+export const faqAnswer1= "100%. Everything runs locally on your machine — no cloud storage, no third-party access. Your credentials and personal info stay with you, always."
+export const faqQuestion2= "When do I get notified?"
+export const faqAnswer2= "You’ll get alerts as soon as your application status changes, or when a new opportunity matches your profile or only get notified when anything major happens like getting a response from a recruiter. Notifications are fully customizable — you’re always in control."
+export const faqQuestion3= "Is it available on the phone?"
+export const faqAnswer3= "Absolutely! The HireDue mobile app lets you view your dashboard, track progress, and receive instant job alerts wherever you are."
+export const faqQuestion4= "Do I need to pay to get started?"
+export const faqAnswer4= "Nope — HireDue’s beta is completely free. Once launched, you’ll have flexible pricing options, including a free plan for core automation features."
+export const faqQuestion5= "Which platforms does HireDue work with?"
+export const faqAnswer5= "HireDue seamlessly integrates with LinkedIn, Naukri, Gmail, and major company portals — with more platforms being added every month."
+
