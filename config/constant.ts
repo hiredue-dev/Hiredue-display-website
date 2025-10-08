@@ -2,6 +2,7 @@ export const HeroSubTitle = "Beta Launch Coming Soon —"
 export const HeroSubTrigger = "Stay Tuned!"
 export const HeroTitle = "Your Job Hunt, Fully Automated"
 export const HeroTitlDescription = "HireDue applies, tracks, and connects — all for you. From applications to referrals, let automation do the heavy lifting while you focus on getting hired."
+export const HeroTitlDescriptionMobile = "HireDue applies, tracks, and connects — all for you." 
 
 
 

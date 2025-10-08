@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { HowWeDoItSection } from "./defualt";
 import DimmedCard from "./dimmedCard";
+import { cn } from "@/lib/utils";
 
 
 
@@ -21,7 +22,7 @@ function TimeLineCardVertical({ events,className }: { events: HowWeDoItSection[]
 
 		const tl = gsap.timeline({ repeatDelay: 0.5 });
 		const animationDuration = 0.6
-		tl.set([prefixRef.current,suffixRef.current],{opacity:0.3, color:"white"})
+		tl.set([prefixRef.current,suffixRef.current],{opacity:0.4, color:"white"})
 		tl.to(prefixRef.current,{
         opacity: 1,
 				color:"rgba(253, 186, 114)",
@@ -51,14 +52,19 @@ function TimeLineCardVertical({ events,className }: { events: HowWeDoItSection[]
 	}, []);
 
 	return (
-		<div className={className}>
+		<div className={cn(className)}>
 		<ol
 			ref={containerRef}
 			className="relative space-y-8 before:absolute before:-ml-px before:h-full before:w-0.5 before:rounded-full before:bg-gray-200 dark:before:bg-gray-700"
 		>
 
-		<div className="w-fit ml-3 text-center text-md h-fit
-		font-semibold sm:text-2xl" ref={prefixRef}>Hire Due</div>
+
+		<div className="flex justify-start items-start w-fit gap-3 ml-3 ">
+			<div className="w-fit text-center text-md h-fit 
+			font-semibold text-white sm:text-2xl opacity-40" >From</div>
+			<div className="w-fit text-center text-md h-fit
+			font-semibold sm:text-2xl" ref={prefixRef}>Hire Due</div>
+		</div>
 
 			{
 				events.map((event, idx) => (
@@ -72,8 +78,12 @@ function TimeLineCardVertical({ events,className }: { events: HowWeDoItSection[]
 				))
 			}
 
-		<div className="w-fit ml-3 text-center text-md h-fit
+		<div className="flex justify-start items-start w-fit gap-3 ml-3">
+			<div className="w-fit text-center text-md h-fit 
+			font-semibold text-white sm:text-2xl opacity-40" >To</div>
+		<div className="w-fit text-center text-md h-fit
 		font-semibold sm:text-2xl"ref={suffixRef}>Hired You</div>
+		</div>
 
 		</ol>
 		</div>

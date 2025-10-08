@@ -49,10 +49,14 @@ function TimeLineCardHorizontal({ events}: { events: HowWeDoItSection[] }) {
 	}, []);
 
   return (
-		<div className="hidden md:flex justify-center translate-y-full h-[200%] items-start mb-60">
+		<div className="hidden md:flex justify-center translate-y-full h-[200%] items-start mb-60 w-full">
 
-		<div className="w-fit mr-3 text-center text-md h-fit translate-y-[-50%]
+		<div className="flex flex-col items-end w-fit gap-3 translate-y-[-50%] mr-3 ">
+		<div className="w-fit text-center text-md h-fit 
+		font-semibold sm:text-2xl opacity-30" >From</div>
+		<div className="w-fit text-center text-md h-fit 
 		font-semibold sm:text-2xl opacity-30" ref={prefixRef}>Hire Due</div>
+		</div>
 
     <ol
 		ref={containerRef}
@@ -77,8 +81,12 @@ function TimeLineCardHorizontal({ events}: { events: HowWeDoItSection[] }) {
         ))}
       </ol>
 
-		<div className="w-fit ml-3 text-center text-md h-fit translate-y-[-50%]
-		font-semibold sm:text-2xl opacity-30" ref={suffixRef}>Hired You</div>
+		<div className="flex flex-col items-start w-fit gap-3 ml-3 translate-y-[-50%]">
+			<div className="w-fit text-center text-md h-fit 
+			font-semibold text-white sm:text-2xl opacity-30" >To</div>
+			<div className="w-fit text-center text-md h-fit 
+			font-semibold sm:text-2xl opacity-30" ref={suffixRef}>Hired You</div>
+		</div>
 
 		</div>
   );

@@ -55,8 +55,8 @@ export const metadata: Metadata = {
     creator: "@name",
   },
   icons: {
-    icon: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: "/Logo_v2/logo_dark_no_bg.png",
+    apple: "/Logo_v2/logo_dark_no_bg.png",
   },
 };
 
