@@ -31,22 +31,28 @@ export default function Bento() {
 
         {/* <div className="flex h-full w-full items-center justify-center p-10"> */}
         {/* ml-2 sm:mx-auto sm:mt-4 object-[center_2rem] transition-[object-position] delay-150 duration-300 ease-in-out hover:object-center */}
-            <div className="grid h-full w-full gap-4 p-3 grid-cols-1 lg:grid-cols-10 rounded-lg shadow-md px-15 py-10">
+            <div className="grid h-full w-full gap-4 p-3 grid-cols-1 lg:grid-cols-10 rounded-lg shadow-md px-5 sm:px-15 py-10">
                 <div className={cn("lg:col-span-4 col-span-1 px-4", cardClass)}>
                     <h2 className="pl-4 text-xl font-bold">{howWeDoItHeading1}</h2>
                     <div className="pl-4 mt-3 text-muted-foreground max-w-xs">{howWeDoItDescription1}</div>
                     <div className="overflow-hidden h-80">
-                    <Image src="/mobile-dark.png" alt="Design first" width={350} height={20} className="mx-auto mt-4 object-[center_2rem] transition-[object-position] delay-150 duration-300 ease-in-out hover:object-center"/>
+                    <Image src="/phone-image.png" alt="Design first" width={350} height={20} className="mx-auto mt-4 object-[center_2rem] transition-[object-position] delay-150 duration-300 ease-in-out hover:object-center"/>
                     </div>
                 </div>
                 <div className={cn("lg:col-span-6 col-span-1 ", cardClass)}>
                     <h2 className="pl-4 text-xl font-bold">{howWeDoItHeading2}</h2>
                     <div className="pl-4 mt-3 text-muted-foreground max-w-lg">{howWeDoItDescription2}</div>
+                    <div className="overflow-hidden h-80">
+                    <Image src="/image.png" alt="Design first" width={300} height={20} className="mx-auto transition-all delay-150 duration-300 ease-in-out hover:object-center scale-120 sm:scale-180 hover:scale-200"/>
+                    </div>
                 </div>
 
                 <div className={cn("lg:col-span-6 col-span-1", cardClass)}>
                     <h2 className="pl-4 text-xl font-bold">{howWeDoItHeading3}</h2>
                     <div className="pl-4 mt-3 text-muted-foreground max-w-lg">{howWeDoItDescription3}</div>
+                    <div className="overflow-hidden">
+                    <Image src="/resume.png" alt="Design first" width={675} height={20} className="mx-auto mt-4 object-[center_2rem] transition-[object-position] delay-150 duration-300 ease-in-out hover:object-center"/>
+                    </div>
 
                 </div>
                 <div className={cn("lg:col-span-4 col-span-1", cardClass)}>
@@ -75,10 +81,15 @@ export default function Bento() {
                     <h2 className="pl-4 text-xl font-bold">{howWeDoItHeading5}</h2>
                     <div className="pl-4 mt-3 text-muted-foreground max-w-sm">{howWeDoItDescription5}
                     </div>
+                    <div className="overflow-hidden h-full">
+                    <Image src="/chat.png" alt="Design first" width={400} height={20} className="mx-auto mt-4 object-[center_1.5rem] transition-[object-position] delay-150 duration-300 ease-in-out hover:object-center"/>
+                    </div>
                 </div>
                 <div className={cn("lg:col-span-6 col-span-1", cardClass)}>
                     <h2 className="pl-4 text-xl font-bold">{howWeDoItHeading6}</h2>
-                    <div className="pl-4 mt-3 text-muted-foreground max-w-sm">{howWeDoItDescription6}
+                    <div className="pl-4 mt-3 text-muted-foreground max-w-sm">{howWeDoItDescription6}</div>
+                    <div className="overflow-hidden h-full">
+                    <Image src="/radar2.png" alt="Design first" width={425} height={20} className="mx-auto mt-4 object-[center_1.5rem] transition-[object-position] delay-150 duration-300 ease-in-out hover:object-center"/>
                     </div>
                 </div>
             </div>
