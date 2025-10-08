@@ -3,7 +3,7 @@ export const siteConfig = {
   url: "/",
 	onSiteUrl:{
 		aboutUs:"/about-us",
-		career:"/career"
+		career:"https://docs.google.com/forms/d/e/1FAIpQLSes3ksWrQd3xWZcwAnOBUflyYKS0EDe39UdOIJqBy6wbef13Q/viewform?usp=sharing&ouid=109675074426586738636"
 	},
   getStartedUrl:
     "https://hiredue.com/",
