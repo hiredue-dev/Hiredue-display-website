@@ -82,14 +82,14 @@ export default function Bento() {
                     <div className="pl-4 mt-3 text-muted-foreground max-w-sm">{howWeDoItDescription5}
                     </div>
                     <div className="overflow-hidden h-full">
-                    <Image src="/chat.png" alt="Design first" width={400} height={20} className="mx-auto mt-4 object-[center_1.5rem] transition-[object-position] delay-150 duration-300 ease-in-out hover:object-center"/>
+                    <Image src="/chat2.png" alt="Design first" width={400} height={20} className="mx-auto mt-4 object-[center_1.5rem] transition-[object-position] delay-150 duration-300 ease-in-out hover:object-center"/>
                     </div>
                 </div>
-                <div className={cn("lg:col-span-6 col-span-1", cardClass)}>
+                <div className={cn("lg:col-span-6 col-span-1", "pt-5 rounded-lg shadow-md glass-3 from-brand-foreground/20 to-brand-foreground/0 bg-radial transition delay-150 duration-300 ease-in-out hover:to-brand-foreground/0")}>
                     <h2 className="pl-4 text-xl font-bold">{howWeDoItHeading6}</h2>
                     <div className="pl-4 mt-3 text-muted-foreground max-w-sm">{howWeDoItDescription6}</div>
                     <div className="overflow-hidden h-full">
-                    <Image src="/radar2.png" alt="Design first" width={425} height={20} className="mx-auto mt-4 object-[center_1.5rem] transition-[object-position] delay-150 duration-300 ease-in-out hover:object-center"/>
+                    <Image src="/Technological Radar with Logos.png" alt="Design first" width={425} height={20} className="mx-auto mt-4 object-[center_1.5rem] transition-[object-position] delay-150 duration-300 ease-in-out hover:object-center"/>
                     </div>
                 </div>
             </div>
